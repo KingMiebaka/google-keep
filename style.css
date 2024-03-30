@@ -1,0 +1,417 @@
+/* base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #202124;
+    color: rgb(232, 234, 237);
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 1rem;
+}
+
+/* base styling */
+
+/* grid-container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* grid-container */
+
+/* nav */
+nav {
+    grid-column: 1/13;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 1px solid grey;
+}
+
+nav .search-button.button-white {
+    background-color: white !important;
+}
+
+nav .search-button.button-black {
+    background: rgba(241, 243, 244, .24) !important;
+}
+
+nav .part-1 .hamburger {
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+nav .part-1 .hamburger:hover {
+    cursor: pointer;
+    background-color: rgba(71, 69, 69, 0.63);
+}
+
+nav .part-1 .hamburger.active {
+    background-color: rgba(71, 69, 69, 0.63);
+}
+
+nav .part-1 .hamburger svg {
+    width: 24px;
+    height: 24px;
+    fill: #e8eaed;
+}
+
+nav .hamburger button {
+    background: none;
+    border: none;
+    display: grid;
+    place-content: center;
+}
+
+nav .hamburger svg {
+    width: 100%;
+    height: 100%;
+}
+
+nav .part-1 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav .part-2 {
+    width: 722px;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(241, 243, 244, .24);
+}
+
+nav .part-2 button {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(241, 243, 244, .24);
+    border: none;
+    display: flex;
+    color: white;
+    fill: white;
+    align-items: center;
+    position: relative;
+}
+
+nav .part-2 button input {
+    background: rgba(85, 85, 85, 0.24);
+    /* background: rgba(49, 49, 49, 0.24); */
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    color: black;
+    fill: white;
+    align-items: center;
+    outline: none;
+    padding-left: 68px;
+
+}
+
+nav .part-2 .search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    font-size: 1rem;
+}
+
+nav .part-2 .search-container.color-white {
+    display: flex;
+    /* fill: rgb(118, 118, 118); */
+    fill: white !important;
+    color: white !important;
+}
+
+nav .part-2 .search-container.color-black {
+    fill: rgb(118, 118, 118) !important;
+    color: rgb(118, 118, 118) !important;
+    display: flex;
+}
+
+nav .part-3 {
+    display: flex;
+    gap: 24px;
+}
+
+nav .part-3 button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #e8eaed;
+    padding: 10px;
+}
+
+nav .part-3 button:hover {
+    background-color: #3b3b3b86;
+    border-radius: 50%;
+}
+/* nav */
+
+/* aside */
+aside {
+    grid-column: 1/4;
+    height: calc(100vh - 64px);
+    border-right: 1px solid white;
+    padding-top: 20px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+}
+
+aside svg {
+    fill: white;
+}
+
+aside p{
+    margin: 0;
+    padding: 0;
+}
+
+aside .notes,
+.reminders,
+.edit-labels,
+.archives,
+.trash {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+   height: 50px;
+    width: 230px;
+    background-image: url();
+}
+
+.trash:hover {
+   
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-color: #3b3b3b86;
+}
+
+ .notes:hover {
+    width: 230px;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-color: #3b3b3b86;
+}
+
+.reminders:hover {
+    width: 230px;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-color: #3b3b3b86;
+}
+
+.edit-labels:hover {
+    width: 230px;
+
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-color: #3b3b3b86;
+}
+
+.archives:hover {
+        width: 230px;
+
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-color: #3b3b3b86;
+}
+
+aside p.hide {
+    display: none;
+}
+/* aside */
+
+/* main */
+main {
+    grid-column: 4/13;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+
+main button:first-child {
+    width: 598px;
+    height: 46px;
+    background: transparent;
+    outline-color: rgb(232, 234, 237);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: rgb(232, 234, 237);
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 1rem;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    border-radius: 8px;
+}
+
+main .first-button {
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+}
+
+main .first-button .button-container .fa-regular{
+   width: 40px;
+   height: 40px;
+   display: flex;align-items: center;
+   justify-content: center;
+  
+}
+
+main .first-button .fa-regular:hover {
+    border-radius: 50%;
+    background-color: #5f63686e;
+}
+
+main .first-button.hide {
+    display: none;
+}
+
+main .last-button.show {
+    display: flex;
+}
+
+main .last-button.hide {
+    display: none;
+}
+
+main button:first-child .text-container {
+    width: 400px;
+    color: #e8eaed;
+    outline: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+main .button-container {
+    display: flex;
+    gap: 30px;
+}
+
+main .bulb {
+    font-size: 100px;
+    display: grid;
+    place-content: center;
+    outline: pink;
+    opacity: 0.1;
+}
+
+main .below-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .below-content .text-content {
+    color: rgb(154, 160, 166);
+}
+
+main p {
+    text-align: center;
+}
+
+main button:last-of-type {
+    position: absolute;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .20);
+    border-color: #5f6368;
+    border-radius: 8px;
+    width: 598px;
+    height: 136px;
+    background: transparent;
+    outline-color: rgb(232, 234, 237);
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 20px;
+    color: rgb(232, 234, 237);
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 1rem;
+    top: 50px;
+    left: 200px;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+main button:last-of-type .part-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main button:last-of-type .part-1 input:nth-child(1) {
+    background: transparent;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #e8eaed;
+}
+
+main button:last-of-type .part-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+}
+
+main button:last-of-type .part-2 input {
+    background: transparent;
+    width: 100%;
+    color: white;
+    outline: 0;
+    font-size: 1rem;
+}
+
+
+main button:last-of-type .part-3 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main button:last-of-type .part-3 .icons {
+    display: flex;
+    gap: 50px;
+}
+
+main button:last-of-type .part-3 .icons i {
+    padding: 10px;
+    border-radius: 50%;
+}
+
+main button:last-of-type .part-3 .icons i:hover {
+    background-color: #3b3b3b86;
+}
+
+main button:last-of-type .part-3 .last-button-close {
+   margin-bottom: 0;
+}
+
+main button:last-of-type .part-3 .last-button-close:hover {
+    background-color: #3b3b3b86;
+    border-radius: 5px;
+}
+/* main */
+
+/* grid-container */
